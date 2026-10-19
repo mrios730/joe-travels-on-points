@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+  <link href="style.css?v=2" rel="stylesheet">
 </head>
 
 <body>
@@ -36,6 +38,7 @@
       <a class="brand" href="#top">✈ Joe Travels on Points</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#map">Map</a></li>
         <li><a href="#trips">Trips</a></li>
         <li><a href="#tips">Points 101</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -63,12 +66,22 @@
       </div>
     </section>
 
+    <section id="map" class="section">
+      <h2>Where I've been</h2>
+      <p class="section-intro">Every pin is a trip booked with points. Select one to see what it cost.</p>
+      <div class="map-frame">
+        <div id="trip-map" class="trip-map" role="region" aria-label="Map of Joe's trips">
+          <p class="map-fallback">The map couldn't load. The trips are listed below.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="trips" class="section">
       <h2>Recent trips</h2>
       <p class="section-intro">A few favorite redemptions. Prices are what I actually paid in points plus taxes and fees.</p>
 
       <div class="cards">
-        <article class="card">
+        <article class="card" data-lat="35.6762" data-lng="139.6503">
           <div class="card-art art-tokyo" aria-hidden="true">🗼</div>
           <div class="card-body">
             <h3>Tokyo, Japan</h3>
@@ -80,7 +93,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-lat="38.7223" data-lng="-9.1393">
           <div class="card-art art-lisbon" aria-hidden="true">🚋</div>
           <div class="card-body">
             <h3>Lisbon, Portugal</h3>
@@ -92,7 +105,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-lat="4.1755" data-lng="73.5093">
           <div class="card-art art-maldives" aria-hidden="true">🏝️</div>
           <div class="card-body">
             <h3>The Maldives</h3>
@@ -104,7 +117,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-lat="-13.5320" data-lng="-71.9675">
           <div class="card-art art-peru" aria-hidden="true">⛰️</div>
           <div class="card-body">
             <h3>Cusco, Peru</h3>
@@ -156,6 +169,9 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script src="map.js?v=2"></script>
 </body>
 
 </html>
