@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joe Travels on Points</title>
+  <meta name="description" content="Joe's personal travel site: trips, destinations, and tips for traveling the world with points and miles.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="hero">
+    <!-- Sky decoration: drifting clouds and the flying plane -->
+    <div class="sky" aria-hidden="true">
+      <span class="cloud cloud-1"></span>
+      <span class="cloud cloud-2"></span>
+      <span class="cloud cloud-3"></span>
+
+      <div class="flight">
+        <div class="plane">
+          <span class="contrail"></span>
+          <svg viewBox="0 0 64 64" width="56" height="56">
+            <path fill="currentColor"
+              d="M62 30.5c0-2-1.8-3.5-4-3.5H41.5L27 6h-6l7 21H14.5L9 20H4l3.5 12L4 44h5l5.5-7H28l-7 21h6l14.5-21H58c2.2 0 4-1.5 4-3.5v-3z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="brand" href="#top">✈ Joe Travels on Points</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#trips">Trips</a></li>
+        <li><a href="#tips">Points 101</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <p class="eyebrow">Points &amp; miles · Travel stories</p>
+      <h1>Joe Travels on Points</h1>
+      <p class="tagline">Seeing the world in business class, paid for with credit card points and airline miles.</p>
+      <a class="button" href="#trips">See where I've been</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <div class="avatar" aria-hidden="true">J</div>
+      <div>
+        <h2>Hi, I'm Joe</h2>
+        <p>
+          I'm a regular person with a not-so-regular hobby: turning everyday spending into flights and hotel
+          stays around the world. Every trip on this site was booked mostly with points and miles. Here I share
+          where I went, how I booked it, and what I'd do differently next time.
+        </p>
+      </div>
+    </section>
+
+    <section id="trips" class="section">
+      <h2>Recent trips</h2>
+      <p class="section-intro">A few favorite redemptions. Prices are what I actually paid in points plus taxes and fees.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-art art-tokyo" aria-hidden="true">🗼</div>
+          <div class="card-body">
+            <h3>Tokyo, Japan</h3>
+            <p>Ramen crawls, the Shinkansen to Kyoto, and a lie-flat seat across the Pacific.</p>
+            <dl class="redemption">
+              <dt>Flight</dt><dd>Business class, round trip</dd>
+              <dt>Cost</dt><dd>110,000 miles + $120</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art art-lisbon" aria-hidden="true">🚋</div>
+          <div class="card-body">
+            <h3>Lisbon, Portugal</h3>
+            <p>Pastéis de nata, Tram 28, and sunsets over the Tagus from a hilltop miradouro.</p>
+            <dl class="redemption">
+              <dt>Flight</dt><dd>Economy, round trip</dd>
+              <dt>Cost</dt><dd>40,000 miles + $85</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art art-maldives" aria-hidden="true">🏝️</div>
+          <div class="card-body">
+            <h3>The Maldives</h3>
+            <p>An overwater villa on free-night certificates. Worth every point I saved for it.</p>
+            <dl class="redemption">
+              <dt>Hotel</dt><dd>4 nights, overwater villa</dd>
+              <dt>Cost</dt><dd>3 free nights + 1 paid</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art art-peru" aria-hidden="true">⛰️</div>
+          <div class="card-body">
+            <h3>Cusco, Peru</h3>
+            <p>Acclimatizing with coca tea, then the early train to Machu Picchu.</p>
+            <dl class="redemption">
+              <dt>Flight</dt><dd>Economy, round trip</dd>
+              <dt>Cost</dt><dd>35,000 points + $60</dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips" class="section">
+      <h2>Points 101</h2>
+      <p class="section-intro">How I go from swiping a card to boarding a plane.</p>
+
+      <ol class="steps">
+        <li>
+          <h3>Earn</h3>
+          <p>Pick a card or two whose bonus categories match what you already spend on, like groceries, dining or travel. Never carry a balance; interest wipes out the value of the points.</p>
+        </li>
+        <li>
+          <h3>Transfer</h3>
+          <p>Flexible bank points can move to many airline and hotel partners. Only transfer once you've found award space, because transfers usually can't be undone.</p>
+        </li>
+        <li>
+          <h3>Book</h3>
+          <p>Search award availability early or right before departure, when airlines often release seats. Be flexible on dates and the deals show up.</p>
+        </li>
+        <li>
+          <h3>Fly</h3>
+          <p>Enjoy the lounge. Then start planning the next one.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Say hello</h2>
+      <p>Have a question about a redemption or a destination you'd like me to cover? I'd love to hear from you.</p>
+      <a class="button" href="mailto:hello@example.com">Email Joe</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Joe Travels on Points · Not financial advice, just a guy who loves a good award seat.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
