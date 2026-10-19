@@ -1,0 +1,490 @@
+:root {
+  /* First Class Lounge: midnight navy, champagne gold, ivory */
+  --sky-top: #0b1a33;
+  --sky-bottom: #1f3a66;
+  --sun: #d4af6a;
+  --ink: #14213d;
+  --muted: #5a6175;
+  --bg: #faf7f0;
+  --surface: #ffffff;
+  --accent: #c9a45c;
+  --accent-dark: #8f6f33;
+  --border: #e7e0d0;
+  --shadow: 0 10px 30px rgba(20, 33, 61, 0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--ink);
+  border: 1px solid var(--sun);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(201, 164, 92, 0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--sun);
+  transform: translateY(-2px);
+}
+
+/* ---------- Header / hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(212, 175, 106, 0.4) 0, rgba(212, 175, 106, 0) 22%),
+    linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 120px 16px 80px;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sun);
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 800;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tagline {
+  font-size: 1.15rem;
+  max-width: 560px;
+  margin: 0 auto 28px;
+  opacity: 0.95;
+}
+
+/* ---------- Sky animation ---------- */
+
+.sky {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  width: 160px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  filter: blur(1px);
+  animation: drift linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 70px;
+  height: 70px;
+  top: -34px;
+  left: 26px;
+}
+
+.cloud::after {
+  width: 52px;
+  height: 52px;
+  top: -24px;
+  left: 82px;
+}
+
+.cloud-1 {
+  top: 26%;
+  animation-duration: 60s;
+  animation-delay: -10s;
+}
+
+.cloud-2 {
+  top: 60%;
+  transform: scale(0.7);
+  opacity: 0.6;
+  animation-duration: 80s;
+  animation-delay: -45s;
+}
+
+.cloud-3 {
+  top: 80%;
+  opacity: 0.8;
+  animation-duration: 70s;
+  animation-delay: -25s;
+}
+
+@keyframes drift {
+  from {
+    translate: -200px 0;
+  }
+
+  to {
+    translate: calc(100vw + 200px) 0;
+  }
+}
+
+/* The plane flies left-to-right across the header on a loop,
+   while an inner wrapper bobs it gently up and down. */
+.flight {
+  position: absolute;
+  top: 34%;
+  left: 0;
+  animation: fly 14s linear infinite;
+}
+
+.plane {
+  position: relative;
+  color: #fff;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+  animation: bob 3.5s ease-in-out infinite;
+}
+
+.plane svg {
+  display: block;
+  position: relative;
+}
+
+.contrail {
+  position: absolute;
+  top: 50%;
+  right: 85%;
+  width: 260px;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+}
+
+@keyframes fly {
+  from {
+    transform: translateX(-340px);
+  }
+
+  to {
+    transform: translateX(calc(100vw + 80px));
+  }
+}
+
+@keyframes bob {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cloud,
+  .plane {
+    animation: none;
+  }
+
+  /* Park the plane in the sky instead of flying it */
+  .flight {
+    animation: none;
+    left: auto;
+    right: 8%;
+    top: 20%;
+  }
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 16px 0;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+
+.about {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.about p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 720px;
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky-top), var(--sky-bottom));
+  border: 2px solid var(--accent);
+  color: var(--sun);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+
+/* Trip cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(20, 33, 61, 0.14);
+}
+
+.card-art {
+  display: grid;
+  place-items: center;
+  height: 140px;
+  font-size: 3.5rem;
+}
+
+.art-tokyo {
+  background: linear-gradient(135deg, #0b1a33, #3a4f7a);
+}
+
+.art-lisbon {
+  background: linear-gradient(135deg, #1f3a66, #8f6f33);
+}
+
+.art-maldives {
+  background: linear-gradient(135deg, #12284a, #2f6e86);
+}
+
+.art-peru {
+  background: linear-gradient(135deg, #14213d, #4d5a3e);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.redemption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.9rem;
+}
+
+.redemption dt {
+  font-weight: 600;
+}
+
+.redemption dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Points 101 steps */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: 80px;
+  padding: 28px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero-content {
+    padding-top: 80px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
