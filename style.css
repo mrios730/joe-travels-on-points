@@ -505,6 +505,11 @@ a {
   font-family: inherit;
 }
 
+/* Soften OpenStreetMap's bright colors so the map sits with the ivory/navy palette */
+.trip-map .leaflet-tile-pane {
+  filter: saturate(0.55) sepia(0.12);
+}
+
 .map-fallback {
   margin: 0;
   padding: 24px;
