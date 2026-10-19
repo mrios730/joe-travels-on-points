@@ -488,3 +488,121 @@ a {
     text-align: center;
   }
 }
+
+/* ---------- Trip map ---------- */
+
+.map-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.trip-map {
+  height: 440px;
+  background: var(--sky-top);
+  font-family: inherit;
+}
+
+.map-fallback {
+  margin: 0;
+  padding: 24px;
+  color: #fff;
+}
+
+.map-pin span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--ink);
+  box-shadow: 0 0 0 4px rgba(201, 164, 92, 0.35);
+  transition: transform 0.2s;
+}
+
+.map-pin:hover span,
+.map-pin:focus-visible span {
+  transform: scale(1.2);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  border-top: 3px solid var(--accent);
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--muted);
+}
+
+.map-popup h3 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.map-popup p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.map-popup dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  margin: 0;
+}
+
+.map-popup dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.map-popup dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.map-reset {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.map-reset:hover,
+.map-reset:focus-visible {
+  background: var(--sun);
+}
+
+.map-link {
+  margin-top: 14px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.map-link:hover,
+.map-link:focus-visible {
+  color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .trip-map {
+    height: 340px;
+  }
+}

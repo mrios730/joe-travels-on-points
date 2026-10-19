@@ -7,8 +7,9 @@ The animation respects the visitor's "reduce motion" setting.
 
 ## Files
 
-- `index.html` – page content (about, trips, Points 101, contact)
+- `index.html` – page content (about, map, trips, Points 101, contact)
 - `style.css` – styles and the header animations
+- `map.js` – interactive trip map (Leaflet + CARTO tiles). Pins come from each trip card's `data-lat`/`data-lng`, so a new card with coordinates shows up on the map automatically
 
 ## Run locally
 
