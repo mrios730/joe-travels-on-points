@@ -11,6 +11,8 @@ Website: https://mrios730.github.io/joe-travels-on-points/
 
 - `index.html` – page content (about, map, trips, Points 101, contact)
 - `style.css` – styles and the header animations
+- `logo.svg` – the site logo (navy badge, gold ring, plane and "JTP" monogram)
+- `og-image.png` – the 1200×630 image shown when the site link is shared; set in the `og:` meta tags in `index.html`
 - `map.js` – interactive trip map (Leaflet + OpenStreetMap tiles). Pins come from each trip card's `data-lat`/`data-lng`, so a new card with coordinates shows up on the map automatically
 
 ## Trip map
