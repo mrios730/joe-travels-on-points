@@ -1,15 +1,16 @@
 :root {
-  --sky-top: #1e4f8c;
-  --sky-bottom: #6fb3e8;
-  --sun: #ffb347;
-  --ink: #1f2a37;
-  --muted: #5b6676;
-  --bg: #f7f4ee;
+  /* First Class Lounge: midnight navy, champagne gold, ivory */
+  --sky-top: #0b1a33;
+  --sky-bottom: #1f3a66;
+  --sun: #d4af6a;
+  --ink: #14213d;
+  --muted: #5a6175;
+  --bg: #faf7f0;
   --surface: #ffffff;
-  --accent: #e8663d;
-  --accent-dark: #c44e29;
-  --border: #e6e0d4;
-  --shadow: 0 10px 30px rgba(31, 42, 55, 0.08);
+  --accent: #c9a45c;
+  --accent-dark: #8f6f33;
+  --border: #e7e0d0;
+  --shadow: 0 10px 30px rgba(20, 33, 61, 0.08);
   --radius: 16px;
 }
 
@@ -44,18 +45,19 @@ a {
 .button {
   display: inline-block;
   background: var(--accent);
-  color: #fff;
+  color: var(--ink);
+  border: 1px solid var(--sun);
   font-weight: 600;
   text-decoration: none;
   padding: 0.8em 1.5em;
   border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(232, 102, 61, 0.35);
+  box-shadow: 0 6px 18px rgba(201, 164, 92, 0.3);
   transition: transform 0.2s, background 0.2s;
 }
 
 .button:hover,
 .button:focus-visible {
-  background: var(--accent-dark);
+  background: var(--sun);
   transform: translateY(-2px);
 }
 
@@ -67,7 +69,7 @@ a {
   min-height: 520px;
   color: #fff;
   background:
-    radial-gradient(circle at 85% 20%, rgba(255, 179, 71, 0.55) 0, rgba(255, 179, 71, 0) 22%),
+    radial-gradient(circle at 85% 20%, rgba(212, 175, 106, 0.4) 0, rgba(212, 175, 106, 0) 22%),
     linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
 }
 
@@ -128,7 +130,7 @@ a {
   letter-spacing: 0.15em;
   font-size: 0.8rem;
   font-weight: 600;
-  opacity: 0.85;
+  color: var(--sun);
   margin: 0 0 12px;
 }
 
@@ -159,7 +161,7 @@ a {
   left: 0;
   width: 160px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   filter: blur(1px);
   animation: drift linear infinite;
@@ -329,8 +331,9 @@ a {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--sun), var(--accent));
-  color: #fff;
+  background: linear-gradient(135deg, var(--sky-top), var(--sky-bottom));
+  border: 2px solid var(--accent);
+  color: var(--sun);
   font-family: 'Fraunces', Georgia, serif;
   font-size: 3rem;
   font-weight: 800;
@@ -355,7 +358,7 @@ a {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(31, 42, 55, 0.14);
+  box-shadow: 0 16px 36px rgba(20, 33, 61, 0.14);
 }
 
 .card-art {
@@ -366,19 +369,19 @@ a {
 }
 
 .art-tokyo {
-  background: linear-gradient(135deg, #ffb7c5, #e8663d);
+  background: linear-gradient(135deg, #0b1a33, #3a4f7a);
 }
 
 .art-lisbon {
-  background: linear-gradient(135deg, #ffd56b, #f08a4b);
+  background: linear-gradient(135deg, #1f3a66, #8f6f33);
 }
 
 .art-maldives {
-  background: linear-gradient(135deg, #7ee0d6, #1e88c8);
+  background: linear-gradient(135deg, #12284a, #2f6e86);
 }
 
 .art-peru {
-  background: linear-gradient(135deg, #a8d58b, #4a7c59);
+  background: linear-gradient(135deg, #14213d, #4d5a3e);
 }
 
 .card-body {
@@ -436,8 +439,8 @@ a {
   height: 36px;
   margin-bottom: 12px;
   border-radius: 50%;
-  background: var(--sky-top);
-  color: #fff;
+  border: 1px solid var(--accent);
+  color: var(--accent-dark);
   font-weight: 600;
 }
 
