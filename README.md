@@ -5,6 +5,8 @@ A personal travel website about seeing the world with credit card points and air
 The header features an animated plane (with a contrail) flying across a sky of drifting clouds.
 The animation respects the visitor's "reduce motion" setting.
 
+Website: https://mrios730.github.io/joe-travels-on-points/
+
 ## Files
 
 - `index.html` – page content (about, map, trips, Points 101, contact)
