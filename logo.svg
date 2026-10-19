@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Joe Travels on Points logo">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1a33"/>
+      <stop offset="1" stop-color="#1f3a66"/>
+    </linearGradient>
+  </defs>
+  <!-- Navy night-sky badge with a champagne-gold ring -->
+  <circle cx="256" cy="256" r="240" fill="url(#sky)"/>
+  <circle cx="256" cy="256" r="240" fill="none" stroke="#c9a45c" stroke-width="16"/>
+  <circle cx="256" cy="256" r="212" fill="none" stroke="#d4af6a" stroke-width="3" opacity="0.6"/>
+  <!-- Dotted flight path arcing up to the plane -->
+  <path d="M108 344 Q 190 200 310 192" fill="none" stroke="#d4af6a" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <!-- Plane (same silhouette as the site header) -->
+  <g transform="translate(300 128) rotate(-18 64 64) scale(2)" fill="#ffffff">
+    <path d="M62 30.5c0-2-1.8-3.5-4-3.5H41.5L27 6h-6l7 21H14.5L9 20H4l3.5 12L4 44h5l5.5-7H28l-7 21h6l14.5-21H58c2.2 0 4-1.5 4-3.5v-3z"/>
+  </g>
+  <!-- Monogram -->
+  <text x="256" y="420" text-anchor="middle" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="800" font-size="76" letter-spacing="6" fill="#d4af6a">JTP</text>
+</svg>
